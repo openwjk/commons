@@ -16,8 +16,7 @@ public class IntervalUtil {
      * @param dataValue 数值类型的
      * @param interval   正常的数学区间，包括无穷大等，如：(1,3)、>5%、(-∞,6]、(125%,135%)U(70%,80%)
      * @return true：表示data_value在区间interval范围内，false：表示data_value不在区间interval范围内
-     * @author: kangyl17909
-     * @date: 2018年7月3日
+     * @date: 2023/6/23
      */
     public static boolean isInTheInterval(String dataValue, String interval) {
         //将区间和data_value转化为可计算的表达式

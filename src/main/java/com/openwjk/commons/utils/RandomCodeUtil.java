@@ -1,5 +1,6 @@
 package com.openwjk.commons.utils;
 
+import java.util.Random;
 import java.util.UUID;
 
 /**
@@ -9,6 +10,7 @@ import java.util.UUID;
  */
 public class RandomCodeUtil {
     private static final String NUM = "0123456789";
+    private static final Random random = new Random();
 
     public static String generateCode(int length) {
         StringBuilder sb = new StringBuilder();
@@ -17,6 +19,7 @@ public class RandomCodeUtil {
         }
         return sb.toString();
     }
+
     public static String generateOnlyCode(int length) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < length; i++) {
@@ -53,6 +56,12 @@ public class RandomCodeUtil {
         return (int) (Math.random() * UPPER_CASE_ALPHABET.length);
     }
 
+    /**
+     * 生成随机数(最大值限制)
+     */
+    public static int randomInt(int maxNum) {
+        return random.nextInt(maxNum);
+    }
 
     private static final String[] UPPER_CASE_ALPHABET = {
             "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",

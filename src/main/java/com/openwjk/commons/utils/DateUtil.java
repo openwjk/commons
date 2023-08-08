@@ -29,6 +29,7 @@ public class DateUtil {
     public static final String FORMAT_DATE_COMPACT_TILL_MONTH = "yyyyMM";
     public static final String FORMAT_DATE_NORMAL_TILL_MONTH = "yyyy-MM";
     public static final String FORMAT_TIME_COMPACT = "HHmmss";
+    public static final String FORMAT_TIME_COMPACT_TILL_MINUTE = "HH:mm";
 
     static {
         System.setProperty("user.timezone", "Etc/GMT-8");

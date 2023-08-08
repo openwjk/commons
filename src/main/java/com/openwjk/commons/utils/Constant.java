@@ -53,4 +53,5 @@ public class Constant {
     public static final String LINE_FEED = "\n";
     public static final String TAB = "\t";
     public static final String SPACE = " ";
+    public static final String EN_COMMA = ",";
 }

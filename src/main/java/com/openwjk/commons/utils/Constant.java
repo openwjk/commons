@@ -51,4 +51,6 @@ public class Constant {
     public static final String STR_Y = "y";
     public static final String STR_N = "n";
     public static final String LINE_FEED = "\n";
+    public static final String TAB = "\t";
+    public static final String SPACE = " ";
 }

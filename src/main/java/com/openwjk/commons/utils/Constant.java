@@ -24,6 +24,8 @@ public class Constant {
     public static final Integer INT_EIGHT = 8;
     public static final Integer INT_NINE = 9;
     public static final Integer INT_TEN = 10;
+    public static final Integer INT_THIRTY = 30;
+    public static final Integer INT_SIXTY= 60;
     public static final String STRING_ZERO = "0";
     public static final String STRING_ONE = "1";
     public static final String STRING_TWO = "2";
@@ -35,6 +37,8 @@ public class Constant {
     public static final String STRING_EIGHT = "8";
     public static final String STRING_NINE = "9";
     public static final String STRING_TEN = "10";
+    public static final String STRING_THIRTY = "30";
+    public static final String STRING_SIXTY= "60";
     public static final Long LONG_ZERO = 0L;
     public static final Long LONG_ONE = 1L;
     public static final Long LONG_TWO = 2L;
@@ -46,6 +50,8 @@ public class Constant {
     public static final Long LONG_EIGHT = 8L;
     public static final Long LONG_NINE = 9L;
     public static final Long LONG_TEN = 10L;
+    public static final Long LONG_THIRTY = 30L;
+    public static final Long LONG_SIXTY= 60L;
     public static final String STR_UP_Y = "Y";
     public static final String STR_UP_N = "N";
     public static final String STR_Y = "y";

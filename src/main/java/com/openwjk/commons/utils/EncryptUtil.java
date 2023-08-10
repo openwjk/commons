@@ -1,6 +1,7 @@
 package com.openwjk.commons.utils;
 
 import lombok.Data;
+import lombok.SneakyThrows;
 import org.apache.commons.codec.binary.Base64;
 
 import javax.crypto.Cipher;
@@ -159,11 +160,12 @@ public class EncryptUtil {
 
     /**
      * 公钥加密
-     * @see EncryptUtil#decryptByPrivateKey(byte[], java.lang.String) 解密
+     *
      * @param data      源数据
      * @param publicKey 公钥(BASE64编码)
      * @return
      * @throws Exception
+     * @see EncryptUtil#decryptByPrivateKey(byte[], java.lang.String) 解密
      */
     public static byte[] encryptByPublicKey(byte[] data, String publicKey)
             throws Exception {
@@ -198,8 +200,9 @@ public class EncryptUtil {
 
     /**
      * 使用私钥解密
-     * @see  EncryptUtil#encryptByPublicKey(byte[], java.lang.String) 加密
+     *
      * @param data 已加密数据
+     * @see EncryptUtil#encryptByPublicKey(byte[], java.lang.String) 加密
      */
     public static String decryptByPrivateKey(byte[] data, String privateKey) {
         // 加密
@@ -246,10 +249,10 @@ public class EncryptUtil {
     }
 
 
-
     /**
      * AES加密
      * AES-ECB  PKCS5Padding补位
+     *
      * @param key 128 192 256 位
      */
     public static String aesECBEncrypt(String src, String key) throws Exception {
@@ -264,6 +267,7 @@ public class EncryptUtil {
     /**
      * AES解密
      * AES-ECB  PKCS5Padding补位
+     *
      * @param key 128 192 256 位
      */
     public static String aesECBDecrypt(byte[] src, String key) throws Exception {
@@ -274,11 +278,13 @@ public class EncryptUtil {
         byte[] original = cipher.doFinal(src);
         return new String(original, ENCODING_UTF8);
     }
+
     /**
      * AES解密
      * AES-CBC  PKCS5Padding补位
+     *
      * @param key 密钥 128 192 256 位
-     * @param iv 偏移向量 128 位
+     * @param iv  偏移向量 128 位
      */
     public static String aesCBCEncrypt(String data, String key, String iv) throws Exception {
         Cipher cipher = Cipher.getInstance(AES_CBC_ALGORITHM);
@@ -290,11 +296,13 @@ public class EncryptUtil {
 
         return encodeBASE64(encryptedBytes);
     }
+
     /**
      * AES解密
      * AES-CBC  PKCS5Padding补位
+     *
      * @param key 密钥 128 192 256 位
-     * @param iv 偏移向量 128 位
+     * @param iv  偏移向量 128 位
      */
     public static String aesCBCDecrypt(String data, String key, String iv) throws Exception {
         Cipher cipher = Cipher.getInstance(AES_CBC_ALGORITHM);
@@ -305,5 +313,28 @@ public class EncryptUtil {
         byte[] decryptedBytes = cipher.doFinal(decodeBASE64(data));
 
         return new String(decryptedBytes, StandardCharsets.UTF_8);
+    }
+
+    @SneakyThrows
+    public static String md5(String s) {
+        char[] hexDigits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+
+        byte[] btInput = s.getBytes("UTF-8");
+        // 获得MD5摘要算法的 MessageDigest 对象
+        MessageDigest mdInst = MessageDigest.getInstance("MD5");
+        // 使用指定的字节更新摘要
+        mdInst.update(btInput);
+        // 获得密文
+        byte[] md = mdInst.digest();
+        // 把密文转换成十六进制的字符串形式
+        int j = md.length;
+        char[] str = new char[j * 2];
+        int k = 0;
+        for (int i = 0; i < j; i++) {
+            byte byte0 = md[i];
+            str[k++] = hexDigits[byte0 >>> 4 & 0xf];
+            str[k++] = hexDigits[byte0 & 0xf];
+        }
+        return new String(str);
     }
 }

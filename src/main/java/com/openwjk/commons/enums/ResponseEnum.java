@@ -13,6 +13,7 @@ public enum ResponseEnum {
     PARAM_FORMAT_ERROR("12", "check param error."),
     INSUFFICIENT_PERMISSION("13", "insufficient permissions."),
     IP_NOT_ALLOW_ACCESS("14", "ip don't allow access."),
+    REPEAT_COMMIT("15", "don't repeat commit."),
 
     PARAM_CHECK_FAIL("20", "param is invalid."),
     PARAM_STRATEGY_INVALID("21", "request strategy is invalid."),

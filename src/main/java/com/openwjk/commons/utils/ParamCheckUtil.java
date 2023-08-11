@@ -10,7 +10,7 @@ import java.math.BigDecimal;
  * @date 2023/6/23 13:54
  */
 public class ParamCheckUtil {
-    public boolean checkIsNumber(String number) {
+    public static boolean checkIsNumber(String number) {
         try {
             if (StringUtils.isNotBlank(number) && (number.contains("e") || number.contains("E")))
                 return false;

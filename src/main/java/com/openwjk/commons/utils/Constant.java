@@ -62,4 +62,5 @@ public class Constant {
     public static final String EN_COMMA = ",";
     public static final String DEFAULT = "default";
     public static final String DEFAULT_UP = "DEFAULT";
+    public static final String POUND_KEY = "#";
 }

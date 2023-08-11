@@ -14,6 +14,7 @@ public enum ResponseEnum {
     INSUFFICIENT_PERMISSION("13", "insufficient permissions."),
     IP_NOT_ALLOW_ACCESS("14", "ip don't allow access."),
     REPEAT_COMMIT("15", "don't repeat commit."),
+    NETWORK_BUSY("15", "the network is busy, please try again later."),
 
     PARAM_CHECK_FAIL("20", "param is invalid."),
     PARAM_STRATEGY_INVALID("21", "request strategy is invalid."),

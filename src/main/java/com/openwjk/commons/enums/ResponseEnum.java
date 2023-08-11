@@ -14,14 +14,15 @@ public enum ResponseEnum {
     INSUFFICIENT_PERMISSION("13", "insufficient permissions."),
     IP_NOT_ALLOW_ACCESS("14", "ip don't allow access."),
     REPEAT_COMMIT("15", "don't repeat commit."),
-    NETWORK_BUSY("15", "the network is busy, please try again later."),
+    NETWORK_BUSY("16", "the network is busy, please try again later."),
+
 
     PARAM_CHECK_FAIL("20", "param is invalid."),
     PARAM_STRATEGY_INVALID("21", "request strategy is invalid."),
     RPC_FAIL("30", "call remote service occur error."),
 
     NOT_ALLOWED("40", "current status don't allow operation."),
-
+    DENY_ACCESS("98", "deny access."),
     SYSTEM_ERROR("99", "error.");
 
     private String code;

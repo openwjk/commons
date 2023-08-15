@@ -64,4 +64,5 @@ public class Constant {
     public static final String DEFAULT_UP = "DEFAULT";
     public static final String POUND_KEY = "#";
     private static final String TEMP_PATH = "java.io.tmpdir";
+    public static final String COOKIE_KEY_TOKEN = "token";
 }

@@ -10,13 +10,13 @@ import java.io.Serializable;
  * @description
  * @date 2023/7/30 8:56
  */
-public class ResponseVO implements Serializable {
+public class ResponseVO<T> implements Serializable {
     private static final long serialVersionUID = 1L;
     private String isSuccess;
     private String msg;
-    private Object data;
+    private T data;
 
-    public ResponseVO(Object data) {
+    public ResponseVO(T data) {
         this.isSuccess = ResponseEnum.SUCCESS.getCode();
         this.msg = ResponseEnum.SUCCESS.getMsg();
         this.data = data;
@@ -57,7 +57,7 @@ public class ResponseVO implements Serializable {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 

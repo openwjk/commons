@@ -63,4 +63,5 @@ public class Constant {
     public static final String DEFAULT = "default";
     public static final String DEFAULT_UP = "DEFAULT";
     public static final String POUND_KEY = "#";
+    private static final String TEMP_PATH = "java.io.tmpdir";
 }
